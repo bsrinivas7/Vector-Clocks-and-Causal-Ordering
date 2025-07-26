@@ -24,18 +24,18 @@ def get(node, key):
         print(f"[ERROR] Failed to GET from {node}: {e}")
 
 if __name__ == "__main__":
-    print("==== Causal Consistency Test Scenario ====\n")
+    
 
-    put("node1", "x", "A")  # Initial write
+    put("node1", "x", "A")  
     time.sleep(1)
 
-    get("node2", "x")       # node2 may not have A yet
+    get("node2", "x")      
     time.sleep(1)
 
-    put("node2", "x", "B")  # causally depends on A
+    put("node2", "x", "B")  
     time.sleep(1)
 
-    get("node3", "x")       # node3 must receive A before B
+    get("node3", "x")       
     time.sleep(1)
 
-    print("\n==== Test Finished ====")
+    
