@@ -79,7 +79,7 @@ if __name__ == "__main__":
     PEER_PORTS = list(map(int, sys.argv[3:]))
 
     vector_clock = {}
-    for i in range(1, 4):  # node1 to node3
+    for i in range(1, 4):  
         vector_clock[f"node{i}"] = 0
 
     app.run(host="0.0.0.0", port=PORT)
